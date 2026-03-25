@@ -22,6 +22,7 @@
       # System configuration
       nixosConfigurations.wsl = nixpkgs.lib.nixosSystem {
         inherit system;
+        specialArgs = { inherit llm-agents; };
         modules = [
           nixos-wsl.nixosModules.default
           ./configuration.nix
