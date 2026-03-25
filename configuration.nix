@@ -3,7 +3,7 @@
 {
   wsl.enable = true;
   wsl.defaultUser = "nixos";
-  wsl.interop.includePath = false;
+  wsl.wslConf.interop.appendWindowsPath = false;
 
   # Enable flakes and nix-command
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
